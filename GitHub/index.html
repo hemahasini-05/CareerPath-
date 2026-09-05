@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerMatch.com | Find the career you're built for</title>
+    <meta name="description"
+        content="CareerMatch helps you discover roles, close skill gaps, and measure your estimated profile match." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="CareerMatch.com home"><span
+                    class="brand-mark">CM</span><span>Career<span>Match.com</span></span></a>
+            <nav class="main-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#explore">Explore
+                    Roles</a><a href="#categories">Career Categories</a><a href="#skills">Skill Explorer</a><a
+                    href="#eligibility">Eligibility Checker</a><a href="#roadmap">Career Roadmap</a><a
+                    href="#about">About</a></nav>
+            <a class="nav-action" href="#eligibility">Check My Eligibility <b>↗</b></a><button class="nav-toggle"
+                aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow"><i></i> The career clarity platform</p>
+                <h1>Find the career<br />you're <em>built for.</em></h1>
+                <p class="hero-lead">Explore careers, discover the skills employers expect, and measure how ready you
+                    are for your dream role.</p>
+                <div class="hero-actions"><a class="btn btn-primary" href="#explore">Explore careers <b>↗</b></a><a
+                        class="btn btn-ghost" href="#eligibility">Check my eligibility <b>◌</b></a></div>
+                <div class="hero-proof"><span
+                        class="avatars"><i>AK</i><i>MS</i><i>JR</i><i>+</i></span><span><strong>12,000+</strong> people
+                        exploring their next move</span></div>
+            </div>
+            <div class="career-radar" aria-label="Career match illustration">
+                <div class="radar-grid"><span></span><span></span><span></span></div>
+                <div class="radar-ring ring-one"></div>
+                <div class="radar-ring ring-two"></div>
+                <div class="radar-ring ring-three"></div>
+                <div class="radar-pulse"></div>
+                <div class="radar-core"><span>YOUR</span><strong>MATCH</strong><small>starts here</small></div>
+                <div class="radar-tag tag-one"><span class="tag-icon cyan">⌘</span><span><small>Strong
+                            match</small><b>Software Engineer</b></span><em>84%</em></div>
+                <div class="radar-tag tag-two"><span class="tag-icon violet">✦</span><span><small>Explore
+                            next</small><b>Data Analyst</b></span><em>72%</em></div>
+                <div class="radar-label label-one">Skills <b>↗</b></div>
+                <div class="radar-label label-two">Interests <b>↗</b></div>
+            </div>
+        </section>
+
+        <section class="trust-bar">
+            <div class="container trust-inner"><span>Built for every path</span><b>IT & Software</b><b>Data &
+                    AI</b><b>Engineering</b><b>Business</b><b>Design</b><b>Public Sector</b></div>
+        </section>
+
+        <section class="section" id="explore">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow"><i></i> Explore your options</p>
+                        <h2>Thousands of paths.<br /><em>One clearer next step.</em></h2>
+                    </div>
+                    <p class="section-description">Search role profiles across IT, engineering, business, creative,
+                        healthcare, and public-sector careers.</p>
+                </div>
+                <div class="explorer-panel">
+                    <div class="explorer-tools">
+                        <div class="search-box"><span>⌕</span><input id="role-search" type="search"
+                                placeholder="Search roles, skills, or tools..." aria-label="Search roles" /><kbd>/</kbd>
+                        </div><select id="industry-filter" aria-label="Filter by industry">
+                            <option value="All">All industries</option>
+                        </select><select id="level-filter" aria-label="Filter by experience">
+                            <option value="All">All levels</option>
+                            <option>Entry level</option>
+                            <option>Mid level</option>
+                            <option>Senior level</option>
+                        </select><button id="saved-filter" class="icon-button" title="Show saved roles">♡</button>
+                    </div>
+                    <div class="category-tabs" id="categories"><button class="category-tab active"
+                            data-category="All">All roles <small>1200+</small></button><button class="category-tab"
+                            data-category="IT & Software">IT & Software</button><button class="category-tab"
+                            data-category="Data & AI">Data & AI</button><button class="category-tab"
+                            data-category="Engineering">Engineering</button><button class="category-tab"
+                            data-category="Design & Creative">Design & Creative</button><button class="category-tab"
+                            data-category="Business & Management">Business & Management</button><button
+                            class="category-tab" data-category="Finance & Accounting">Finance &
+                            Accounting</button><button class="category-tab"
+                            data-category="Healthcare">Healthcare</button><button class="category-tab"
+                            data-category="Government">Government / Public Sector</button></div>
+                    <div class="results-row"><span id="results-count">20 curated roles</span><button
+                            class="compare-link" id="open-comparison">Compare selected <b>→</b></button></div>
+                    <div id="role-grid" class="role-grid"></div>
+                    <div id="empty-state" class="empty-state" hidden><strong>No roles match that
+                            search.</strong><span>Try a different keyword or reset your filters.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section profile-section" id="eligibility">
+            <div class="container">
+                <div class="section-header compact">
+                    <div>
+                        <p class="eyebrow"><i></i> Your readiness dashboard</p>
+                        <h2>Turn your profile into a <em>clearer plan.</em></h2>
+                    </div>
+                    <p class="section-description">Choose a target role, tell us what you bring, and get an estimated
+                        profile-match score you can act on.</p>
+                </div>
+                <div class="profile-layout">
+                    <form id="profile-form" class="profile-card">
+                        <div class="card-heading">
+                            <div><span class="step-label">01 / Your profile</span>
+                                <h3>What are you bringing to the table?</h3>
+                            </div><span class="profile-badge">Private by design</span>
+                        </div>
+                        <div class="form-grid"><label>Highest qualification<select id="education">
+                                    <option value="degree">Bachelor's degree</option>
+                                    <option value="diploma">Diploma / Associate</option>
+                                    <option value="masters">Master's degree</option>
+                                    <option value="school">High school</option>
+                                </select></label><label>Degree / branch<input id="degree" value="Mechanical Engineering"
+                                    placeholder="e.g. Computer Science" /></label><label>Graduation year<input
+                                    id="graduation" type="number" value="2025" min="1950"
+                                    max="2100" /></label><label>Experience<select id="experience">
+                                    <option value="fresher">Fresher</option>
+                                    <option value="internship">Internship</option>
+                                    <option value="0-2">0–2 years</option>
+                                    <option value="2-5">2–5 years</option>
+                                    <option value="5+">5+ years</option>
+                                </select></label></div>
+                        <div class="field-block">
+                            <div class="field-title"><label>Skills you have</label><span id="skill-count">0
+                                    selected</span></div>
+                            <div id="skill-picker" class="skill-picker"></div>
+                        </div>
+                        <div class="form-grid"><label>Certifications<input id="certifications"
+                                    placeholder="e.g. CSWA, AWS Cloud Practitioner" /></label><label>Projects
+                                completed<input id="projects"
+                                    placeholder="e.g. Gearbox assembly, portfolio site" /></label></div>
+                        <div class="field-block">
+                            <div class="field-title"><label>Work preference</label></div>
+                            <div class="choice-row"><label><input type="radio" name="work" value="Remote" checked />
+                                    Remote</label><label><input type="radio" name="work" value="Hybrid" />
+                                    Hybrid</label><label><input type="radio" name="work" value="On-site" />
+                                    On-site</label></div>
+                        </div><button class="btn btn-primary calculate-button" type="submit">Calculate my match
+                            <b>↗</b></button>
+                    </form>
+                    <aside class="score-card">
+                        <div class="score-top"><span class="step-label">02 / Estimated match</span><button
+                                id="reset-profile" class="subtle-button">Reset</button></div>
+                        <div class="target-role"><span class="target-icon">◈</span>
+                            <div><small>Target role</small><strong id="target-role-name">Mechanical Design
+                                    Engineer</strong></div><button id="change-role">Change</button>
+                        </div>
+                        <div class="score-circle" id="score-circle">
+                            <div><strong id="score-value">0</strong><span>%</span><small>profile match</small></div>
+                        </div>
+                        <div class="score-status"><strong id="score-status">Complete your profile</strong>
+                            <p id="score-copy">Your estimate will appear here after you calculate a role match.</p>
+                        </div>
+                        <div class="score-breakdown">
+                            <div><span>Education match</span><b id="education-score">—</b><i><em
+                                        style="width:0%"></em></i></div>
+                            <div><span>Technical skills</span><b id="technical-score">—</b><i><em
+                                        style="width:0%"></em></i></div>
+                            <div><span>Tools & software</span><b id="tools-score">—</b><i><em style="width:0%"></em></i>
+                            </div>
+                            <div><span>Experience</span><b id="experience-score">—</b><i><em style="width:0%"></em></i>
+                            </div>
+                            <div><span>Projects & certs</span><b id="projects-score">—</b><i><em
+                                        style="width:0%"></em></i></div>
+                        </div>
+                        <p class="score-disclaimer">This is an estimated profile-match score, not a guarantee of
+                            employment.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section results-section" id="roadmap">
+            <div class="container">
+                <div class="section-header compact">
+                    <div>
+                        <p class="eyebrow"><i></i> Your next move</p>
+                        <h2>Close the gap with <em>momentum.</em></h2>
+                    </div>
+                    <p class="section-description">Use your estimate as a starting point. Small, focused improvements
+                        compound into a stronger profile.</p>
+                </div>
+                <div class="insight-grid">
+                    <div class="insight-card gap-card">
+                        <div class="insight-heading">
+                            <div><span class="step-label">03 / Skill gap analysis</span>
+                                <h3>What to focus on next</h3>
+                            </div><span class="insight-icon">⌁</span>
+                        </div>
+                        <div class="gap-columns">
+                            <div>
+                                <h4><span class="have-dot">✓</span> You have</h4>
+                                <ul id="have-skills">
+                                    <li>Complete your profile to see matches</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4><span class="need-dot">○</span> You need</h4>
+                                <ul id="need-skills">
+                                    <li>Run the eligibility check to find gaps</li>
+                                </ul>
+                            </div>
+                        </div><button class="btn btn-outline" id="build-roadmap">Build my skill roadmap
+                            <b>→</b></button>
+                    </div>
+                    <div class="insight-card roadmap-card">
+                        <div class="insight-heading">
+                            <div><span class="step-label">04 / Personalized roadmap</span>
+                                <h3>Your six-month runway</h3>
+                            </div><span class="roadmap-progress" id="roadmap-progress">0%</span>
+                        </div>
+                        <div class="timeline" id="timeline">
+                            <div class="timeline-item active"><span>01</span>
+                                <div><small>Start here</small><strong>Complete your profile</strong></div>
+                            </div>
+                            <div class="timeline-item"><span>02</span>
+                                <div><small>Month 1–2</small><strong>Build the core skills</strong></div>
+                            </div>
+                            <div class="timeline-item"><span>03</span>
+                                <div><small>Month 3–4</small><strong>Ship a proof-of-work project</strong></div>
+                            </div>
+                            <div class="timeline-item"><span>04</span>
+                                <div><small>Month 5–6</small><strong>Polish your portfolio & apply</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header compact">
+                    <div>
+                        <p class="eyebrow"><i></i> Skill explorer</p>
+                        <h2>Know what the market <em>keeps asking for.</em></h2>
+                    </div>
+                    <p class="section-description">Explore the building blocks behind modern roles, from technical depth
+                        to the human skills that make it useful.</p>
+                </div>
+                <div class="skill-columns">
+                    <div class="skill-library">
+                        <div class="library-tabs"><button class="library-tab active"
+                                data-skill-group="Technical skills">Technical skills</button><button class="library-tab"
+                                data-skill-group="Tools & software">Tools & software</button><button class="library-tab"
+                                data-skill-group="Soft skills">Soft skills</button></div>
+                        <div id="skill-library-list" class="library-list"></div>
+                    </div>
+                    <div class="market-card"><span class="market-kicker">In demand this month</span><strong>Cloud + data
+                            fluency</strong>
+                        <p>Roles that combine domain knowledge with practical data or cloud skills are showing the
+                            fastest growth across industries.</p>
+                        <div class="market-bars">
+                            <div><span>Data Analysis</span><i><em style="width:88%"></em></i><b>88%</b></div>
+                            <div><span>Cloud platforms</span><i><em style="width:74%"></em></i><b>74%</b></div>
+                            <div><span>Communication</span><i><em style="width:91%"></em></i><b>91%</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section comparison-section" id="comparison">
+            <div class="container">
+                <div class="section-header compact">
+                    <div>
+                        <p class="eyebrow"><i></i> Compare your shortlist</p>
+                        <h2>See your strongest <em>direction.</em></h2>
+                    </div>
+                    <p class="section-description">Select up to three roles from the explorer and compare your current
+                        profile against the requirements side by side.</p>
+                </div>
+                <div id="comparison-panel" class="comparison-panel">
+                    <div class="comparison-empty"><span>＋</span><strong>Select roles to compare</strong>
+                        <p>Use the compare control on any role card to build your shortlist.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="role-modal" hidden>
+        <article class="role-modal" role="dialog" aria-modal="true" aria-label="Career role profile"><button
+                class="modal-close" id="modal-close" aria-label="Close role profile">×</button>
+            <div id="modal-content"></div>
+        </article>
+    </div>
+    <footer class="site-footer" id="about">
+        <div class="container footer-content">
+            <div><a class="brand" href="#home"><span
+                        class="brand-mark">CM</span><span>Career<span>Match.com</span></span></a>
+                <p>Discover your direction. Build your proof.</p>
+            </div>
+            <div class="footer-links"><a href="#about">About</a><a href="#explore">Careers</a><a
+                    href="#eligibility">Contact</a><a href="#about">Privacy</a><a href="#about">LinkedIn ↗</a></div>
+            <small>© <span id="year"></span> CareerMatch.com</small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
